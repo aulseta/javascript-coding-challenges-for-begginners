@@ -221,6 +221,8 @@ Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 */
 
+console.log('===== Desafío de Programación #14 =====');
+
 function fibonacci() {
   let contador = 1;
   let a = 0;
@@ -239,17 +241,69 @@ function fibonacci() {
 
 /*
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+*/
 
+console.log('===== Desafío de Programación #15 =====');
+
+function nFibonacci(numero) {
+  if (numero < 2) {
+    return numero;
+  } else {
+    return nFibonacci(numero - 1) + nFibonacci(numero - 2);
+  }
+}
+
+/*
 Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+*/
 
+console.log('===== Desafío de Programación #16 =====');
+
+function esPrimo(numero) {
+  let divisores = [];
+  
+  for (let i = 1; i <= numero; i++) {
+    if (numero % i === 0) {
+      divisores.push(i);
+    }
+  }
+
+  if (divisores.length === 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/*
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
    2 = 2
    1234 = 1 + 2 + 3 + 4 = 10
+*/
 
+console.log('===== Desafío de Programación #17 =====');
+
+function sumaDigitos(numero) {
+
+  if (numero >= 0) {
+    const digitos = numero.toString().split('');
+    let sumaDigitos = 0;
+    for (let i = 0; i < digitos.length; i++) {
+      sumaDigitos += Number(digitos[i]);
+    }
+    return sumaDigitos;
+  }
+}
+
+/*
 Desafío de programación #18: Imprimir los primeros 100 números primos
+*/
 
+console.log('===== Desafío de Programación #18 =====');
+
+/*
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
   Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
