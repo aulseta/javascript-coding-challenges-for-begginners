@@ -187,14 +187,57 @@ Desafío de programación #12: Crea una función que reciba un array de números
 
 console.log('===== Desafío de Programación #12 =====');
 
+function sumaArrayPositivos(array) {
+  let suma = 0;
+  for(let i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+      suma += array[i];
+    }
+  }
+  return suma;
+}
+
 /*
 Desafío de programación #13: Find the maximum number in an array of numbers
+*/
 
+console.log('===== Desafío de Programación #13 =====');
+
+function numeroMaximoArray(array) {
+  let maximo = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > maximo) {
+      maximo = array[i];
+    }
+  }
+
+  return maximo;
+}
+
+/*
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+*/
 
+function fibonacci() {
+  let contador = 1;
+  let a = 0;
+  let b = 1;
+  let c;
+  const fibonacciArr = [a, b];
+  while (contador < 10) {
+    c = a + b;
+    fibonacciArr.push(c);
+    a = b
+    b = c
+    contador++;
+  }
+  console.log(fibonacciArr);
+}
+
+/*
 Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
 Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
